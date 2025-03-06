@@ -86,6 +86,36 @@
             z-index: 1;
         }
         
+        .header-link {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .header-link:hover {
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 201, 255, 0.5);
+        }
+        
+        .header-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        
+        .header-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
         h2 {
             color: var(--primary-color);
             font-weight: 600;
@@ -447,7 +477,7 @@
         </div>
         <div class="container text-center">
             <h1 class="mb-3 fade-in">Special Session on <span class="title-accent">Adaptive and Trustworthy Knowledge Discovery</span></h1>
-            <p class="lead mb-4 fade-in"><a href = "https://cmt3.research.microsoft.com/ADMA2025"></a>ADMA 2025: International Conference Advanced Data Mining and Applications</a></p>
+            <p class="lead mb-4 fade-in"><a href="https://adma2025.github.io/" class="header-link">ADMA 2025: International Conference Advanced Data Mining and Applications</a></p>
             
             <div class="mt-5 fade-in" style="animation-delay: 0.2s;">
                 <ul class="nav nav-pills justify-content-center">
